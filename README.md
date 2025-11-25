@@ -50,7 +50,7 @@ A modern project management application built with Vue 3 and TypeScript.
 
 Clone the repository:
 ```bash
-git clone https://github.com/YOUR_USERNAME/project-management-frontend.git
+git clone https://github.com/Santhosh-kn/project-management-frontend.git
 cd project-management-frontend
 ```
 
@@ -139,14 +139,14 @@ This project is licensed under the MIT License.
 
 ## Author
 
-Santhosh
-- GitHub: [@your-username](https://github.com/your-username)
-- Email: your-email@example.com
+Santhosh KN
+- GitHub: [@Santhosh-kn](https://github.com/Santhosh-kn)
+- Repository: [project-management-frontend](https://github.com/Santhosh-kn/project-management-frontend)
 
-## Backend Repository
+## Related Repository
 
-Backend API: [Link to backend repository]
+Backend API: [project-management-backend](https://github.com/Santhosh-kn/project-management-backend)
 
 ## Support
 
-For support, open an issue in the repository.
+For support, open an issue in the [GitHub repository](https://github.com/Santhosh-kn/project-management-frontend/issues).
