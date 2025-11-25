@@ -1,0 +1,364 @@
+/* Import Bootstrap */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+/* Global Variables */
+:root {
+  --sidebar-width: 250px;
+  --navbar-height: 60px;
+  --primary-color: #0d6efd;
+  --sidebar-bg: #1e293b;
+  --sidebar-text: #cbd5e1;
+  --sidebar-hover: #334155;
+  --navbar-bg: #ffffff;
+  --main-bg: #f8f9fa;
+}
+
+/* CSS RESET - Force proper sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-size: 0.875rem !important;
+  line-height: 1.5 !important;
+  background-color: var(--main-bg) !important;
+  overflow-x: hidden;
+  color: #1e293b;
+}
+
+/* Typography - Override Bootstrap */
+h1, .h1 { font-size: 1.75rem !important; font-weight: 600 !important; margin-bottom: 0.5rem; }
+h2, .h2 { font-size: 1.5rem !important; font-weight: 600 !important; margin-bottom: 0.5rem; }
+h3, .h3 { font-size: 1.25rem !important; font-weight: 600 !important; margin-bottom: 0.5rem; }
+h4, .h4 { font-size: 1.1rem !important; font-weight: 600 !important; margin-bottom: 0.5rem; }
+h5, .h5 { font-size: 1rem !important; font-weight: 600 !important; margin-bottom: 0.5rem; }
+h6, .h6 { font-size: 0.875rem !important; font-weight: 600 !important; margin-bottom: 0.5rem; }
+
+p { 
+  font-size: 0.875rem !important; 
+  line-height: 1.5 !important; 
+  margin-bottom: 0.5rem; 
+}
+
+small, .small { 
+  font-size: 0.75rem !important; 
+}
+
+/* Override Bootstrap Font Sizes */
+.fs-1 { font-size: 2rem !important; }
+.fs-2 { font-size: 1.75rem !important; }
+.fs-3 { font-size: 1.5rem !important; }
+.fs-4 { font-size: 1.25rem !important; }
+.fs-5 { font-size: 1rem !important; }
+.fs-6 { font-size: 0.875rem !important; }
+
+/* Icon Sizes - Control Bootstrap Icons */
+.bi {
+  font-size: 1rem !important;
+  line-height: 1 !important;
+  vertical-align: middle;
+}
+
+.bi-sm { font-size: 0.875rem !important; }
+.bi-lg { font-size: 1.25rem !important; }
+.bi-xl { font-size: 1.5rem !important; }
+.bi-2x { font-size: 2rem !important; }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Layout Styles */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  padding-top: var(--navbar-height);
+  min-height: 100vh;
+  transition: margin-left 0.3s;
+}
+
+.main-content.sidebar-collapsed {
+  margin-left: 0;
+}
+
+.content-wrapper {
+  padding: 1.5rem;
+  max-width: 100%;
+}
+
+/* Card Styles */
+.card {
+  border: none !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem !important;
+}
+
+.card-header {
+  background-color: #fff !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  padding: 0.875rem 1rem !important;
+  font-weight: 600 !important;
+  font-size: 0.9rem !important;
+}
+
+.card-body {
+  padding: 1rem !important;
+}
+
+.card-title {
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* Button Styles */
+.btn {
+  font-weight: 500 !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 0.375rem !important;
+  font-size: 0.875rem !important;
+}
+
+.btn-sm {
+  padding: 0.375rem 0.75rem !important;
+  font-size: 0.8125rem !important;
+}
+
+.btn-lg {
+  padding: 0.625rem 1.25rem !important;
+  font-size: 1rem !important;
+}
+
+.btn-primary {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7 !important;
+  border-color: #0a58ca !important;
+}
+
+/* Form Styles */
+.form-control, .form-select {
+  font-size: 0.875rem !important;
+  padding: 0.5rem 0.75rem !important;
+  border-radius: 0.375rem !important;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 0 0 0.15rem rgba(13, 110, 253, 0.25) !important;
+}
+
+.form-label {
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* Input Group */
+.input-group-text {
+  font-size: 0.875rem !important;
+  padding: 0.5rem 0.75rem !important;
+}
+
+/* Badge Styles */
+.badge {
+  padding: 0.35em 0.65em !important;
+  font-weight: 500 !important;
+  font-size: 0.75rem !important;
+}
+
+/* Table Styles */
+.table {
+  background-color: white !important;
+  font-size: 0.875rem !important;
+}
+
+.table thead th {
+  border-bottom: 2px solid #dee2e6 !important;
+  font-weight: 600 !important;
+  color: #475569 !important;
+  font-size: 0.8125rem !important;
+  padding: 0.75rem !important;
+}
+
+.table tbody td {
+  padding: 0.75rem !important;
+}
+
+/* Dropdown Styles */
+.dropdown-menu {
+  font-size: 0.875rem !important;
+  border-radius: 0.5rem !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+.dropdown-item {
+  font-size: 0.875rem !important;
+  padding: 0.5rem 0.75rem !important;
+}
+
+/* Alert Styles */
+.alert {
+  font-size: 0.875rem !important;
+  padding: 0.875rem 1rem !important;
+  border-radius: 0.5rem !important;
+}
+
+/* Modal Styles */
+.modal-header {
+  padding: 1rem !important;
+}
+
+.modal-title {
+  font-size: 1.125rem !important;
+  font-weight: 600 !important;
+}
+
+.modal-body {
+  padding: 1rem !important;
+  font-size: 0.875rem !important;
+}
+
+.modal-footer {
+  padding: 1rem !important;
+}
+
+/* Animations */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* Utility Classes */
+.text-muted {
+  color: #64748b !important;
+}
+
+.shadow-sm {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+}
+
+.shadow {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1) !important;
+}
+
+.shadow-lg {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Status Colors */
+.status-todo { color: #6c757d !important; }
+.status-in-progress { color: #0d6efd !important; }
+.status-review { color: #ffc107 !important; }
+.status-done { color: #198754 !important; }
+
+.priority-low { color: #6c757d !important; }
+.priority-medium { color: #0dcaf0 !important; }
+.priority-high { color: #fd7e14 !important; }
+.priority-critical { color: #dc3545 !important; }
+
+/* Loading Spinner */
+.spinner-border {
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+  border-width: 0.2em !important;
+}
+
+.spinner-border-sm {
+  width: 1rem !important;
+  height: 1rem !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+  }
+  
+  :root {
+    --sidebar-width: 0;
+  }
+  
+  .content-wrapper {
+    padding: 1rem;
+  }
+}
+
+/* Override Tailwind Utility Classes - BLOCK THEM */
+[class*="w-"],
+[class*="h-"] {
+  width: auto !important;
+  height: auto !important;
+}
+
+svg[class*="w-"],
+svg[class*="h-"] {
+  width: 1rem !important;
+  height: 1rem !important;
+}
+
+/* Force proper SVG sizes */
+svg {
+  width: 1rem !important;
+  height: 1rem !important;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Block all Tailwind @apply directives */
+[class*="@apply"] {
+  all: unset !important;
+}
+
+/* Print Styles */
+@media print {
+  .sidebar,
+  .navbar {
+    display: none !important;
+  }
+  
+  .main-content {
+    margin-left: 0 !important;
+    padding-top: 0 !important;
+  }
+}

@@ -1,0 +1,159 @@
+/* Dark Theme Variables */
+:root[data-theme='dark'] {
+  --bs-body-bg: #1a1a1a;
+  --bs-body-color: #e5e5e5;
+  --bs-card-bg: #2d2d2d;
+  --bs-border-color: #404040;
+  --bs-heading-color: #ffffff;
+  --bs-link-color: #60a5fa;
+  --bs-link-hover-color: #93c5fd;
+}
+
+/* Dark Theme Styles */
+body.dark-theme {
+  background-color: #1a1a1a;
+  color: #e5e5e5;
+}
+
+.dark-theme .card {
+  background-color: #2d2d2d;
+  border-color: #404040;
+  color: #e5e5e5;
+}
+
+.dark-theme .card-header {
+  background-color: #2d2d2d;
+  border-bottom-color: #404040;
+  color: #ffffff;
+}
+
+.dark-theme .card-body {
+  color: #e5e5e5;
+}
+
+.dark-theme .nav-tabs {
+  border-bottom-color: #404040;
+}
+
+.dark-theme .nav-tabs .nav-link {
+  color: #9ca3af;
+}
+
+.dark-theme .nav-tabs .nav-link:hover {
+  color: #60a5fa;
+  border-bottom-color: #404040;
+}
+
+.dark-theme .nav-tabs .nav-link.active {
+  color: #60a5fa;
+  border-bottom-color: #60a5fa;
+}
+
+.dark-theme .form-control,
+.dark-theme .form-select {
+  background-color: #1a1a1a;
+  border-color: #404040;
+  color: #e5e5e5;
+}
+
+.dark-theme .form-control:focus,
+.dark-theme .form-select:focus {
+  background-color: #1a1a1a;
+  border-color: #60a5fa;
+  color: #e5e5e5;
+}
+
+.dark-theme .form-control::placeholder {
+  color: #6b7280;
+}
+
+.dark-theme .form-label {
+  color: #e5e5e5;
+}
+
+.dark-theme .text-muted {
+  color: #9ca3af !important;
+}
+
+.dark-theme .page-title {
+  color: #ffffff;
+}
+
+.dark-theme .modal-content {
+  background-color: #2d2d2d;
+  color: #e5e5e5;
+}
+
+.dark-theme .modal-header {
+  border-bottom-color: #404040;
+}
+
+.dark-theme .modal-footer {
+  border-top-color: #404040;
+}
+
+.dark-theme .table {
+  color: #e5e5e5;
+}
+
+.dark-theme .table thead th {
+  border-bottom-color: #404040;
+  color: #e5e5e5;
+}
+
+.dark-theme .table tbody tr {
+  border-bottom-color: #404040;
+}
+
+.dark-theme .table tbody tr:hover {
+  background-color: #1a1a1a;
+}
+
+.dark-theme .btn-outline-secondary {
+  color: #9ca3af;
+  border-color: #404040;
+}
+
+.dark-theme .btn-outline-secondary:hover {
+  background-color: #404040;
+  border-color: #404040;
+  color: #e5e5e5;
+}
+
+.dark-theme .sidebar {
+  background-color: #2d2d2d;
+  border-right-color: #404040;
+}
+
+.dark-theme .navbar {
+  background-color: #2d2d2d;
+  border-bottom-color: #404040;
+}
+
+.dark-theme .input-group-text {
+  background-color: #1a1a1a;
+  border-color: #404040;
+  color: #e5e5e5;
+}
+
+.dark-theme .btn-check:checked + .btn-outline-primary {
+  background-color: #60a5fa;
+  border-color: #60a5fa;
+  color: #ffffff;
+}
+
+.dark-theme .settings-page {
+  background-color: #1a1a1a;
+}
+
+.dark-theme .notification-item {
+  border-bottom-color: #404040;
+}
+
+.dark-theme .form-text {
+  color: #9ca3af;
+}
+
+.dark-theme .badge {
+  color: #ffffff;
+}
